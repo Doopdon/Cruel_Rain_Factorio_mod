@@ -1,0 +1,43 @@
+Native spawning regression: Factorio 2.0.76, Cave Walls 0.1.13, minimum mesh, seed 0.
+Native vent/save upgrade: same engine/dependency, minimum mesh, seed 17; actual 0.2.19 save loaded in 0.2.20.
+
+vents-spawn-regression
+   3.650 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L1
+   7.447 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L2
+  12.345 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L3
+  17.130 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L4
+  22.193 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L5
+  59.364 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS initial Cave 1, four complete starter deposits and paired primary ramp
+  59.365 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS Level 1 starter nest exclusion applies during initial generation
+  59.370 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L1 ramps=33 nests=5 resources=466
+  59.370 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 1
+  59.376 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L2 ramps=23 nests=10 resources=361
+  59.376 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 2
+  59.381 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L3 ramps=32 nests=11 resources=393
+  59.381 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 3
+  59.386 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L4 ramps=27 nests=8 resources=447
+  59.386 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 4
+  59.391 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L5 ramps=0 nests=8 resources=422
+  59.391 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 5
+  59.422 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS four basic ores, oil and uranium are present on their allowed levels
+  59.423 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS native biters can spawn beside nests on every level
+  59.427 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS spawn inspection reports valid links without generating terrain
+  59.704 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS fresh distant pairing generates a valid up-ramp and linked cargo
+  62.179 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS exploring a distant Level 1 column creates a paired Nauvis return
+  62.185 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS completed generation passes are idempotent and do not resurrect cleared nests
+  62.185 Script @__deep-caves__/tests/engine.lua:201: DC_ENGINE RESULT 13 passed, 0 failed
+PASS save/reload and 600 simulation ticks
+
+vents-upgrade-fixed
+   2.761 Script @__deep-caves__/tests/engine_vents.lua:37: DC_ENGINE UPGRADE FIXTURE saved 37 coal, a slot filter, 8 MJ and copper/red/green wires
+   0.780 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS new and upgraded surface openings are registered native vents
+   0.781 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS real 0.2.19 save upgrade retains cargo, filters, power and all saved wires
+   1.089 Script @__deep-caves__/tests/engine_vents.lua:95: DC_ENGINE PREPARED native vent absorption
+   2.723 Script @__deep-caves__/tests/engine_vents.lua:103: DC_ENGINE SAMPLE 0.500000 pollution removed by one vent; 1.000000 by two over 137 ticks
+   2.723 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS unpowered vents absorb cave pollution through native negative emissions
+   2.723 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS multiple vents in one chunk add their absorption
+   2.723 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS vents stop at zero pollution without producing negative pollution
+   2.723 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS ordinary ascents and descents do not acquire surface ventilation
+   2.723 Script @__deep-caves__/tests/engine_vents.lua:119: DC_ENGINE RESULT 6 passed, 0 failed
+PASS save/reload and 600 simulation ticks
+

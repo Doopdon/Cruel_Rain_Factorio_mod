@@ -1,0 +1,16 @@
+Deep Caves 0.2.2 — configurable network meshes
+
+Remove the older Deep Caves ZIP. Keep Cave Walls installed. Change the six network controls under Settings > Mod settings > Startup, restart Factorio when prompted, then create a new world to compare layouts.
+
+Network       Density    Width (tiles)
+Large            1            12
+Small            4             3
+Web             10             1
+
+Density is approximate nodes along 256 tiles: 1 means 256-tile spacing, 4 means 64-tile spacing, 10 means about 26-tile spacing. Higher density creates more nodes and tunnels. Each layer is a separate connected mesh; intersections join the three networks. Width is nominal tile width; diagonal bends and junctions may be wider.
+
+Both automatic hole filling during terrain generation and the old save repair script/command have been removed. Old passage-widening and legacy boundary stitching are no longer invoked. Ramp access paths remain, so entrances can reach the cave mesh. Entrance artwork is rendered on the floor beneath the character.
+
+Enemy density is configurable from 0–10, default 0.1. Values >=1 all mean a 100% initial-nest roll. Changing enemy density updates explored caves gradually. /cave-populate-enemies retries placement. Five dark levels and the flooded final cave remain.
+
+Changing terrain settings does not redraw existing terrain. Use new worlds for comparisons. Restore the stable Deep Caves 0.1.32 and your previous save to revert the experiment.

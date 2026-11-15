@@ -1,0 +1,13 @@
+{
+  "name": "deep-caves",
+  "version": "0.3.7",
+  "title": "Cruel Rain",
+  "author": "OpenAI + Gannon",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base >= 2.0.46",
+    "! cave-walls",
+    "! surface-thunderstorm"
+  ],
+  "description": "Descend beneath a hostile, rain-soaked wasteland into five cave layers. Narrow tunnels, ore caverns, white cave creatures, flooded depths, configurable pollution vents, ramp cargo, pipe-connected fluids, cross-level power, and solid rock walls. Configurable research and rocket costs; optional surface-only silos. All cave and weather systems included."
+}

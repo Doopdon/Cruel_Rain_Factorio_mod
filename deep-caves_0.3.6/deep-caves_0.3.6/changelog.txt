@@ -1,0 +1,104 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 2026-11-13
+  Compatibility:
+    - Updated for Factorio 2.1 runtime and map-generation APIs.
+    - Preserved linked fluid transport, ramp inventories and cave-wall turret behavior.
+  Testing:
+    - Native Factorio 2.1.24 spawning, fluids, integration, difficulty, vents, collision and water suites.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 2026-10-07
+  Changes:
+    - Added irregular shallow-water patches to Cave 1 tunnel floors.
+    - Kept the 64-tile starting circle dry and retained resource/ramp dry pads.
+  Compatibility:
+    - Extra water appears in newly explored terrain; existing factories are not flooded.
+    - Other cave levels retain their previous water masks. No new world is needed.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 2026-10-07
+  Changes:
+    - Removed biter/spitter nest collision so creatures can move through their nests.
+    - Matched worm collision to nests to preserve native enemy expansion.
+    - Increased nest placement rates with distance from (0,0) and cave depth.
+    - Distance scaling reaches 4x at 3,072 tiles; depth scaling reaches 3x on Cave 5.
+  Compatibility:
+    - Existing nests become passable on load. No new world is needed.
+    - New rates apply to unprocessed chunks; previously cleared nests remain cleared.
+    - Cave 1 starter protection and enemy-density zero are preserved.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 2026-10-07
+  Changes:
+    - Gave all sizes of biters, spitters and worms white colorable body layers.
+    - Applied the same palette to biter/spitter nests and their death/decay animations.
+    - Kept natural dark details, shadows, combat statistics and spawning behavior.
+  Compatibility:
+    - Existing worlds and already-spawned creatures update on loading; no new world is needed.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 2026-10-05
+  Features:
+    - Added independent research and rocket cost Startup multipliers, both defaulting to 0.1.
+    - Added a Startup switch for surface-only rocket silos, enabled by default.
+  Changes:
+    - Hid fluid pipe caps, connection arrows and fluid icons around ramp helpers.
+    - Moved fluid connections one tile closer; adjoining pipes now sit two tiles from the ramp grid center.
+    - Adjusted building clearance while retaining the full cargo area for inserters.
+  Compatibility:
+    - Existing worlds and filled ramp buffers are supported; add an inner pipe to reconnect old outer plumbing.
+    - Research costs match 0.3.2 by default; changing costs can reset partial research progress.
+  Testing:
+    - Checked custom, normal and minimum costs, disabled silo restrictions, four pipe ports and filled-save upgrades.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 2026-10-05
+  Changes:
+    - Reduced science research unit counts and infinite formulas to one tenth, with a minimum of one.
+    - Reduced rocket parts per launch from 100 to 10, or from 50 to 5 with Space Age.
+  Features:
+    - Restricted new rocket silos to above ground, including robot builds, ghosts, raised script builds, revivals and clones.
+    - Added native above-ground placement conditions when Space Age is enabled.
+  Bugfixes:
+    - Rejected underground placements return consumed building items with their quality; full inventories spill refunds.
+  Compatibility:
+    - Existing worlds, completed technologies and saved silo parts remain supported.
+    - Finish partial research before updating: Factorio resets its progress when the unit count changes.
+  Testing:
+    - Tested the research tree, infinite levels, rocket crafting, all five depths, item quality, ghost revival and save upgrades.
+    - Rechecked ramp fluids and the generation, integration and GUI Lua regressions.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.1
+Date: 2026-10-05
+  Features:
+    - Added one native fluid inventory per ramp pair, with four pipe ports and 1,000 capacity at each end.
+    - Added Cargo and Fluids buttons beside the ramp inventory.
+    - Added the Vent pollution absorption Startup setting: default 7.5 per minute, range 0 to 100.
+  Changes:
+    - Reduced default vent absorption from 10 to 7.5 pollution per minute.
+    - Connecting plumbing prepares unused ramp destinations; existing saves receive fluid buffers automatically.
+    - Native linked fluidboxes preserve flow and temperature without a scripted fluid transfer loop.
+  Bugfixes:
+    - Prevented fluid links between networks already containing different fluids; reconnect after flushing one side.
+  Testing:
+    - Verified real pipe flow, four ports, off-grid ramps, fluid conservation, capacity and steam temperature.
+    - Verified filled-save reloads, 0.3.0 upgrades, absorption settings, Space Age and existing wall/weather behavior.
+---------------------------------------------------------------------------------------------------
+Version: 0.3.0
+Date: 2026-10-05
+  Features:
+    - Combined Deep Caves, Cave Walls 0.1.15 and Surface Thunderstorm 0.1.9 into one mod.
+    - Included storm audio, rain, exposure damage, wall brushes, natural rock edges and turret sight checks.
+  Changes:
+    - Removed the separate wall and weather dependencies. Enable only Cruel Rain.
+    - Set the public title to Cruel Rain while retaining the deep-caves identity for existing saves.
+    - Kept existing cave surfaces, prototype names, settings, ramp inventories and power connections.
+    - Added native boundary-helper recovery when upgrading a save from the separate mods.
+    - Licensed original mod content under MIT and included Pixabay water-drop recording credits.
+  Bugfixes:
+    - Shared tick, chunk and lifecycle events now preserve all component handlers.
+    - Muffled rain and thunder recognize surface-connected vents after the ramp rename.
+    - Weather reload cleanup preserves cave skylights and entrance rain.
+  Testing:
+    - Added combined event, audio-routing, combat, flying-object, weather and save-upgrade regression checks.

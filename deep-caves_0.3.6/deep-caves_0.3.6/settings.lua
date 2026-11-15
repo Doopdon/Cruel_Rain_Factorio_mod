@@ -1,0 +1,29 @@
+data:extend({
+  {type="double-setting",name="deep-caves-drip-volume",setting_type="runtime-per-user",default_value=.7,minimum_value=0,maximum_value=1,order="e"},
+  {type="double-setting",name="deep-caves-enemy-density",setting_type="startup",
+    default_value=.1,minimum_value=0,maximum_value=10,order="a"},
+  {type="double-setting",name="deep-caves-vent-absorption",setting_type="startup",
+    default_value=7.5,minimum_value=0,maximum_value=100,order="a-b"},
+  {type="double-setting",name="deep-caves-research-cost",setting_type="startup",
+    default_value=.1,minimum_value=.01,maximum_value=100,order="a-c"},
+  {type="double-setting",name="deep-caves-rocket-cost",setting_type="startup",
+    default_value=.1,minimum_value=.01,maximum_value=100,order="a-d"},
+  {type="bool-setting",name="deep-caves-surface-silos-only",setting_type="startup",
+    default_value=true,order="a-e"},
+  {type="int-setting",name="deep-caves-large-density",setting_type="startup",default_value=1,minimum_value=1,maximum_value=8,order="b-a"},
+  {type="int-setting",name="deep-caves-large-width",setting_type="startup",default_value=12,minimum_value=1,maximum_value=48,order="b-b"},
+  {type="int-setting",name="deep-caves-small-density",setting_type="startup",default_value=4,minimum_value=1,maximum_value=16,order="c-a"},
+  {type="int-setting",name="deep-caves-small-width",setting_type="startup",default_value=3,minimum_value=1,maximum_value=24,order="c-b"},
+  {type="int-setting",name="deep-caves-web-density",setting_type="startup",default_value=10,minimum_value=1,maximum_value=24,order="d-a"},
+  {type="int-setting",name="deep-caves-web-width",setting_type="startup",default_value=1,minimum_value=1,maximum_value=12,order="d-b"}
+})
+
+data:extend({
+ {type="double-setting",name="surface-thunderstorm-character-damage",setting_type="runtime-global",default_value=.5,minimum_value=0,maximum_value=10,order="f"},
+ {type="double-setting",name="surface-thunderstorm-building-damage",setting_type="runtime-global",default_value=.1,minimum_value=0,maximum_value=10,order="g"},
+ {type="bool-setting",name="surface-thunderstorm-enabled",setting_type="runtime-global",default_value=true,order="a"},
+ {type="double-setting",name="surface-thunderstorm-darkness",setting_type="runtime-per-user",default_value=.45,minimum_value=0,maximum_value=.8,order="b"},
+ {type="double-setting",name="surface-thunderstorm-rain-intensity",setting_type="runtime-per-user",default_value=1,minimum_value=0,maximum_value=1,order="c"},
+ {type="bool-setting",name="surface-thunderstorm-lightning",setting_type="runtime-per-user",default_value=true,order="d"},
+ {type="double-setting",name="surface-thunderstorm-volume",setting_type="runtime-per-user",default_value=.55,minimum_value=0,maximum_value=1,order="e"}
+})

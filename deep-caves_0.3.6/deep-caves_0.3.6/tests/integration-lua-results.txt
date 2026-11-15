@@ -1,0 +1,6 @@
+PASS shared lifecycle and tick handlers preserve all three components in order
+PASS array event registrations compose with individual registrations
+PASS legacy wall helpers are recovered without duplicates or unrelated changes
+PASS renamed vents route muffled rain and delayed thunder on Cave 1 only
+PASS remote views suppress vent audio for a sheltered physical character
+RESULT: 5 passed, 0 failed

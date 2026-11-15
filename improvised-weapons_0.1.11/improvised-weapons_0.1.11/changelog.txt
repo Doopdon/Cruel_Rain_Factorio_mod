@@ -1,0 +1,121 @@
+---------------------------------------------------------------------------------------------------
+Version: 0.1.12
+Date: 2026-11-13
+  Compatibility:
+    - Updated metadata and runtime entity handling for Factorio 2.1.
+    - Kept hidden powered-defense helpers non-mineable through their prototypes.
+  Testing:
+    - Loaded with Factorio 2.1.24; in-game interaction tests are still recommended.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.11
+Date: 2026-10-07
+  Fixes:
+    - Mining trees/rocks and other entities without unit numbers no longer crashes spinner cleanup.
+    - Defense cleanup handlers safely ignore untracked entities without unit numbers.
+  Changes:
+    - Fire pits damage only units and player characters, leaving all structures unharmed.
+    - Claymore dud fires use the same structure-safe target rule, retaining 13 fire damage/second and a five-second lifetime.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.10
+Date: 2026-10-07
+  Features:
+    - Electric fence shocks use vanilla accumulator discharge sparks and electrical sound.
+  Changes:
+    - Electric fence demand rises from 20 kW idle to 200 kW per shocking pole for each half-second shock pulse.
+    - Deduplicated target sparks and rate-limited pole sounds; idle/unpowered fences do not emit discharge effects.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.9
+Date: 2026-10-07
+  Fixes:
+    - Barbed wire renders one complete sprite per wall with all 16 neighbor masks, avoiding duplicate native wall posts.
+    - Spinner knockback follows an exact straight path and pushes perpendicular to straight banks.
+    - Multiple spinners apply only one shove per character per update.
+  Changes:
+    - Electric fences use a generated single-pole sprite; native connecting power wires form the fence spans.
+    - Removed electronic circuits from the electric-fence recipe.
+    - Powered actual copper-wire links between fence poles cause contact shocks, deduplicated at shared spans/junctions.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.8
+Date: 2026-10-07
+  Features:
+    - Added generated barbed-wire walls (80 health, 4 physical damage/second).
+    - Added generated electric-fence poles/walls (180 health, 40 electric damage/second, 20 kW draw).
+    - Electric fences connect together and supply nearby machines.
+  Changes:
+    - Spinners damage player characters and apply a small collision-checked knockback.
+    - Added one coal to each basic, piercing, and uranium bullet-magazine recipe.
+    - Gun-turret recipes require five green circuits and turrets require 10 kJ/shot plus 1 kW idle power.
+    - Flamethrower-turret recipes require ten green circuits and turrets require 50 kW electricity as well as fluid ammunition.
+    - Gun-turret technology requires red, green, and military science.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.7
+Date: 2026-10-07
+  Features:
+    - Added coal/stone/pipe claymores: 50% blast, 50% short nonspreading dud fire.
+    - Added single-use bear traps: 100 physical damage to one enemy stepping directly onto the center.
+    - Reused land-mine graphics with pipe and gear overlays and matching icons.
+    - Both traps craft in 0.5 seconds without research and arm after 0.5 seconds.
+  Changes:
+    - Spinner speed reduced to five times v0.1.5, half the v0.1.6 trial speed.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2026-10-07
+  Changes:
+    - Experimental rotor speed increased tenfold from 0.05 to 0.5 for in-game comparison.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.5
+Date: 2026-10-07
+  Changes:
+    - Doubled defense fire damage from 13 to 26 per second before resistances.
+    - Doubled the spinner rotation speed; physical damage remains 13 per second.
+    - Reduced the visual rotor width from three tiles to two; damage remains 3x3.
+  Graphics:
+    - Enlarged fire icons using the vanilla fire-flame-03 animation sheet.
+    - Spinner icons now use a square crop of the vanilla roboport rotor.
+    - Enabled mipmaps and linear filtering on the one-tile burner-drill body.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.4
+Date: 2026-10-07
+  Features:
+    - Added an immediately craftable burner spinner with a 3x3 melee damage area.
+    - Reuses the vanilla roboport rotor over a one-tile burner-drill body.
+    - Chemical fuel powers 13 physical damage per second against hostile forces.
+    - Empty spinners remain in place and restart when refueled.
+  Changes:
+    - Fire-feeding inserters stop at five queued coal; manual loading keeps full-stack capacity.
+    - Feeding inserters move one coal at a time and reserve shared inventory space.
+    - Defense fires exempt spinner bases from their friendly-fire damage.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.3
+Date: 2026-10-07
+  Graphics:
+    - Item/entity icons now use an actual vanilla ground-fire animation frame.
+  Changes:
+    - Reduced crafting time from 1 second to 0.5 seconds, matching copper cable.
+    - Reduced default pollution from 60 to 30 per minute per complete fire, matching a vanilla boiler.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 2026-10-07
+  Features:
+    - Each coal-fed fire now covers a 3x3 square, including diagonal tiles.
+    - Nine visible flame sprites share one center fuel inventory.
+    - Damage remains 13 fire damage per second per fire, before resistances.
+    - Inserters are immune to this mod's defense-fire damage only.
+    - Fuel use and pollution remain unchanged per fire.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 2026-10-07
+  Graphics:
+    - Replaced the ammunition icon with the built-in flame icon.
+    - Added a decorative coal-patch sprite beneath the defense fire.
+    - The patch is not a mineable resource and disappears with the fire.
+---------------------------------------------------------------------------------------------------
+Version: 0.1.0
+Date: 2026-10-07
+  Features:
+    - Initial standalone release for Factorio 2.0.
+    - One-tile coal-fed defensive fire, available without research.
+    - Inserter-compatible coal inventory and five coal of starting fuel.
+    - Configurable coal burn duration and heavy pollution.
+    - Complete despawn when fuel is exhausted.
+    - Vanilla ground-fire graphics and damage, with spreading disabled.

@@ -1,0 +1,70 @@
+Cruel Rain 0.3.2 — Factorio 2.0.76 native checks
+All runs save/reload and simulate 600 ticks.
+
+=== difficulty-fresh ===
+DC_ENGINE SAMPLE compared 0 saved technologies
+DC_ENGINE PASS science costs are one tenth with a minimum of one and preserved ingredients and times
+DC_ENGINE PASS infinite research scales by level and small formulas never become free
+DC_ENGINE SAMPLE research progress 0.4 after ordinary reload
+DC_ENGINE PASS save upgrades retain completed research and current selection with native cost recalculation
+DC_ENGINE PASS saved rocket silo retains its parts while launch cost becomes ten or five
+DC_ENGINE PASS outdoor rocket silos and ghosts remain buildable
+DC_ENGINE PASS every cave depth rejects scripted rocket silo placement with one refund
+DC_ENGINE PASS underground silo ghosts are rejected without a refund or robot rebuild loop
+DC_ENGINE PASS robot refund keeps native item quality and returns only the consumed item
+DC_ENGINE PASS a full robot cargo spills exactly one quality silo
+DC_ENGINE PASS clone and raised ghost revival cannot bypass underground placement
+DC_ENGINE PASS other underground machines still build normally
+DC_ENGINE PASS native rocket crafting finishes after the tenth or fifth part
+DC_ENGINE RESULT 12 passed, 0 failed
+
+=== difficulty-upgrade ===
+DC_ENGINE SAMPLE compared 198 saved technologies
+DC_ENGINE PASS science costs are one tenth with a minimum of one and preserved ingredients and times
+DC_ENGINE PASS infinite research scales by level and small formulas never become free
+DC_ENGINE SAMPLE research progress 0 after cost upgrade
+DC_ENGINE PASS save upgrades retain completed research and current selection with native cost recalculation
+DC_ENGINE PASS saved rocket silo retains its parts while launch cost becomes ten or five
+DC_ENGINE PASS outdoor rocket silos and ghosts remain buildable
+DC_ENGINE PASS every cave depth rejects scripted rocket silo placement with one refund
+DC_ENGINE PASS underground silo ghosts are rejected without a refund or robot rebuild loop
+DC_ENGINE PASS robot refund keeps native item quality and returns only the consumed item
+DC_ENGINE PASS a full robot cargo spills exactly one quality silo
+DC_ENGINE PASS clone and raised ghost revival cannot bypass underground placement
+DC_ENGINE PASS other underground machines still build normally
+DC_ENGINE PASS native rocket crafting finishes after the tenth or fifth part
+DC_ENGINE RESULT 12 passed, 0 failed
+
+=== difficulty-space-age ===
+DC_ENGINE SAMPLE compared 277 saved technologies
+DC_ENGINE PASS science costs are one tenth with a minimum of one and preserved ingredients and times
+DC_ENGINE PASS infinite research scales by level and small formulas never become free
+DC_ENGINE SAMPLE research progress 0 after cost upgrade
+DC_ENGINE PASS save upgrades retain completed research and current selection with native cost recalculation
+DC_ENGINE PASS saved rocket silo retains its parts while launch cost becomes ten or five
+DC_ENGINE PASS outdoor rocket silos and ghosts remain buildable
+DC_ENGINE PASS every cave depth rejects scripted rocket silo placement with one refund
+DC_ENGINE PASS underground silo ghosts are rejected without a refund or robot rebuild loop
+DC_ENGINE PASS robot refund keeps native item quality and returns only the consumed item
+DC_ENGINE PASS a full robot cargo spills exactly one quality silo
+DC_ENGINE PASS clone and raised ghost revival cannot bypass underground placement
+DC_ENGINE PASS other underground machines still build normally
+DC_ENGINE PASS native rocket crafting finishes after the tenth or fifth part
+DC_ENGINE RESULT 12 passed, 0 failed
+
+=== difficulty-fluids-regression ===
+DC_ENGINE PASS filled save reload or 0.3.0 upgrade preserves ramp identities, cargo, power and wires
+DC_ENGINE PASS fluid survives filled-save reload and existing pipes connect on upgrade
+DC_ENGINE PASS fluid upgrade is idempotent and recovers existing native buffer references
+DC_ENGINE PASS all four pipe ports work beside older off-grid ramps
+DC_ENGINE PASS different fluids block linking without deleting or converting either network
+DC_ENGINE PASS building a pipe activates an unused ramp's destination
+DC_ENGINE PASS fluid inventory uses native tank storage alongside the existing cargo inventory
+DC_ENGINE PREPARED native water, oil, steam, fluid conflict and four-side ports
+DC_ENGINE PASS native pipe flow crosses cave layers and conserves fluid
+DC_ENGINE PASS fluid transfer works in both directions and preserves temperature
+DC_ENGINE PASS separate ramp pairs retain separate fluids
+DC_ENGINE PASS native buffers enforce capacity and mix steam heat by amount
+DC_ENGINE PASS a conflicting pair reconnects after its other fluid is flushed
+DC_ENGINE RESULT 12 passed, 0 failed
+

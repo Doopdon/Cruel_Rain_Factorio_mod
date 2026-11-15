@@ -1,0 +1,30 @@
+Cruel Rain 0.3.6
+
+PASS: Level 1 water mask has 17,468 wet coordinates / 66,049 sampled (26.4%).
+PASS: 64-tile starter radius dry; Levels 2-5 unchanged at 16,900 sampled coordinates.
+
+water-native
+   5.730 Script @__deep-caves__/tests/engine_water.lua:24: DC_ENGINE PASS 10 sampled native tunnel tiles have shallow water; all four starter resources remain dry
+   5.730 Script @__deep-caves__/tests/engine_water.lua:25: DC_ENGINE RESULT 1 passed, 0 failed
+
+water-upgrade
+   4.738 Script @__deep-caves__/tests/engine_integration.lua:59: DC_ENGINE UPGRADE FIXTURE original vent, 37 coal, filter, 8 MJ, wires and 42 wall helpers
+   2.669 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS only the combined Deep Caves mod supplies both compatibility interfaces
+   2.669 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS cave creation, native vents and shared cargo survive combined initialization
+   2.669 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS three-mod save upgrade retains vent identity, cargo, filters, power and wires
+   2.669 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS legacy boundary helpers are reused and deliberately inactive turrets stay inactive
+   2.670 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS renamed native vents transmit weather on Cave 1 and respect remote view
+   2.671 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS native weather cleanup preserves cave skylights and puddles
+   3.170 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS native flying creation effects reach the shared script-trigger handler
+   3.171 Script @__deep-caves__/tests/engine_integration.lua:158: DC_ENGINE PREPARED combined wall, weather and combat integration
+   6.365 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS gun-turret holds fire against a target behind native cave walls
+   6.365 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS laser-turret holds fire against a target behind native cave walls
+   6.365 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS flamethrower-turret holds fire against a target behind native cave walls
+   6.365 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS shared tick processing intercepts fast robot crossings and moving bullets
+   6.365 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS surface exposure runs alongside cave population while caves remain sheltered
+   6.511 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS gun-turret resumes normal damage after its wall is erased
+   6.511 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS laser-turret resumes normal damage after its wall is erased
+   6.511 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS flamethrower-turret resumes normal damage after its wall is erased
+   6.511 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS turning weather off stops surface damage without affecting wall processing
+   6.511 Script @__deep-caves__/tests/engine_integration.lua:161: DC_ENGINE RESULT 16 passed, 0 failed
+

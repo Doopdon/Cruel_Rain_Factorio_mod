@@ -1,0 +1,64 @@
+Cruel Rain 0.3.5 validation
+
+52 generation/progression Lua checks, 5 integration, 5 GUI, 7 difficulty: all passed.
+13 native distant-generation checks passed across all five depths.
+1 isolated native collision check passed with both nests and small/behemoth units and characters.
+16 native Space Age/save-upgrade integration checks passed.
+No enemy expansion collision-mask mismatch warning in the final build.
+
+The first added collision assertion referenced an unavailable max_health prototype property.
+It was corrected and rerun in isolation with Space Age; both nest types passed.
+This was a test-only error. Production runtime never loads these test modules.
+
+nest-final
+   8.966 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L1
+  18.309 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L2
+  28.630 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L3
+  41.967 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L4
+  62.610 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L5
+ 129.180 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS initial Cave 1, four complete starter deposits and paired primary ramp
+ 129.181 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS Level 1 starter nest exclusion applies during initial generation
+ 129.198 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L1 ramps=30 nests=38 resources=540
+ 129.198 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 1
+ 129.221 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L2 ramps=40 nests=53 resources=668
+ 129.221 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 2
+ 129.243 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L3 ramps=31 nests=79 resources=549
+ 129.243 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 3
+ 129.272 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L4 ramps=28 nests=98 resources=867
+ 129.272 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 4
+ 129.302 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L5 ramps=0 nests=98 resources=855
+ 129.302 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 5
+ 129.389 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS four basic ores, oil and uranium are present on their allowed levels
+ 129.390 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS native biters can spawn beside nests on every level
+ 129.396 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS spawn inspection reports valid links without generating terrain
+ 129.445 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS fresh distant pairing generates a valid up-ramp and linked cargo
+ 134.161 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS exploring a distant Level 1 column creates a paired Nauvis return
+ 134.182 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS completed generation passes are idempotent and do not resurrect cleared nests
+ 134.283 Script @__deep-caves__/tests/engine.lua:14: DC_ENGINE FAIL both nest types allow native unit and character placement inside their footprint: LuaEntityPrototype doesn't contain key max_health.
+ 134.283 Script @__deep-caves__/tests/engine.lua:219: DC_ENGINE RESULT 13 passed, 1 failed
+
+nest-collision-final
+   4.532 Script @__deep-caves__/tests/engine_collisions.lua:7: DC_ENGINE PASS both nest types allow native unit and character placement inside their footprint
+   4.532 Script @__deep-caves__/tests/engine_collisions.lua:30: DC_ENGINE RESULT 1 passed, 0 failed
+
+nest-final-upgrade
+   5.420 Script @__deep-caves__/tests/engine_integration.lua:59: DC_ENGINE UPGRADE FIXTURE original vent, 37 coal, filter, 8 MJ, wires and 42 wall helpers
+   2.812 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS only the combined Deep Caves mod supplies both compatibility interfaces
+   2.812 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS cave creation, native vents and shared cargo survive combined initialization
+   2.812 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS three-mod save upgrade retains vent identity, cargo, filters, power and wires
+   2.812 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS legacy boundary helpers are reused and deliberately inactive turrets stay inactive
+   2.812 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS renamed native vents transmit weather on Cave 1 and respect remote view
+   2.813 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS native weather cleanup preserves cave skylights and puddles
+   3.367 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS native flying creation effects reach the shared script-trigger handler
+   3.368 Script @__deep-caves__/tests/engine_integration.lua:158: DC_ENGINE PREPARED combined wall, weather and combat integration
+   6.753 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS gun-turret holds fire against a target behind native cave walls
+   6.753 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS laser-turret holds fire against a target behind native cave walls
+   6.753 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS flamethrower-turret holds fire against a target behind native cave walls
+   6.753 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS shared tick processing intercepts fast robot crossings and moving bullets
+   6.753 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS surface exposure runs alongside cave population while caves remain sheltered
+   6.916 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS gun-turret resumes normal damage after its wall is erased
+   6.916 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS laser-turret resumes normal damage after its wall is erased
+   6.916 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS flamethrower-turret resumes normal damage after its wall is erased
+   6.916 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS turning weather off stops surface damage without affecting wall processing
+   6.916 Script @__deep-caves__/tests/engine_integration.lua:161: DC_ENGINE RESULT 16 passed, 0 failed
+

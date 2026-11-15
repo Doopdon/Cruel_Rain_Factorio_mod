@@ -1,0 +1,102 @@
+Factorio 2.0.76; each run saved/reloaded and simulated 600 ticks.
+70 passing named assertions across six profiles.
+
+compact-fresh
+   0.671 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS filled save reload or 0.3.0 upgrade preserves ramp identities, cargo, power and wires
+   0.671 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid survives filled-save reload and existing pipes connect on upgrade
+   0.672 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid upgrade is idempotent and recovers existing native buffer references
+   0.672 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS legacy outer pipes can reconnect through a new inner pipe without moving them
+   1.059 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS all four pipe ports work beside older off-grid ramps
+   1.067 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS different fluids block linking without deleting or converting either network
+   1.685 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS building a pipe activates an unused ramp's destination
+   1.685 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid inventory uses native tank storage alongside the existing cargo inventory
+   1.685 Script @__deep-caves__/tests/engine_fluids.lua:174: DC_ENGINE PREPARED native water, oil, steam, fluid conflict and four-side ports
+   4.955 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS native pipe flow crosses cave layers and conserves fluid
+   4.955 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid transfer works in both directions and preserves temperature
+   4.955 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS separate ramp pairs retain separate fluids
+   4.955 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS native buffers enforce capacity and mix steam heat by amount
+   4.955 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS a conflicting pair reconnects after its other fluid is flushed
+   4.955 Script @__deep-caves__/tests/engine_fluids.lua:206: DC_ENGINE RESULT 13 passed, 0 failed
+
+compact-upgrade
+   1.703 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS filled save reload or 0.3.0 upgrade preserves ramp identities, cargo, power and wires
+   1.703 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid survives filled-save reload and existing pipes connect on upgrade
+   1.706 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid upgrade is idempotent and recovers existing native buffer references
+   1.706 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS legacy outer pipes can reconnect through a new inner pipe without moving them
+   2.127 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS all four pipe ports work beside older off-grid ramps
+   2.131 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS different fluids block linking without deleting or converting either network
+   2.791 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS building a pipe activates an unused ramp's destination
+   2.791 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid inventory uses native tank storage alongside the existing cargo inventory
+   2.791 Script @__deep-caves__/tests/engine_fluids.lua:174: DC_ENGINE PREPARED native water, oil, steam, fluid conflict and four-side ports
+   6.296 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS native pipe flow crosses cave layers and conserves fluid
+   6.296 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS fluid transfer works in both directions and preserves temperature
+   6.296 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS separate ramp pairs retain separate fluids
+   6.296 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS native buffers enforce capacity and mix steam heat by amount
+   6.297 Script @__deep-caves__/tests/engine_fluids.lua:15: DC_ENGINE PASS a conflicting pair reconnects after its other fluid is flushed
+   6.297 Script @__deep-caves__/tests/engine_fluids.lua:206: DC_ENGINE RESULT 13 passed, 0 failed
+
+cost-custom
+   1.759 Script @__deep-caves__/tests/engine_difficulty.lua:83: DC_ENGINE SAMPLE compared 198 saved technologies
+   1.760 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS science costs follow the multiplier with a minimum of one and unchanged ingredients and times
+   1.760 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS infinite research scales by level and small formulas never become free
+   1.760 Script @__deep-caves__/tests/engine_difficulty.lua:102: DC_ENGINE SAMPLE research progress 0.8 after cost upgrade
+   1.760 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS save upgrades retain completed research and current selection with native cost recalculation
+   1.760 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS saved rocket silo retains its parts while launch cost becomes ten or five
+   1.815 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS outdoor rocket silos and ghosts remain buildable
+   4.535 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS every cave depth rejects scripted rocket silo placement with one refund
+   4.748 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS underground silo ghosts are rejected without a refund or robot rebuild loop
+   4.866 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS robot refund keeps native item quality and returns only the consumed item
+   4.999 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS a full robot cargo spills exactly one quality silo
+   5.494 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS clone and raised ghost revival cannot bypass underground placement
+   5.637 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS other underground machines still build normally
+  15.840 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS native rocket crafting finishes after the tenth or fifth part
+  15.840 Script @__deep-caves__/tests/engine_difficulty.lua:210: DC_ENGINE RESULT 12 passed, 0 failed
+
+cost-normal
+   5.840 Script @__deep-caves__/tests/engine_difficulty.lua:83: DC_ENGINE SAMPLE compared 198 saved technologies
+   5.840 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS science costs follow the multiplier with a minimum of one and unchanged ingredients and times
+   5.840 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS infinite research scales by level and small formulas never become free
+   5.840 Script @__deep-caves__/tests/engine_difficulty.lua:100: DC_ENGINE SAMPLE research progress 0.4 after cost upgrade
+   5.840 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS save upgrades retain completed research and current selection with native cost recalculation
+   5.840 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS saved rocket silo retains its parts while launch cost becomes ten or five
+   5.916 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS outdoor rocket silos and ghosts remain buildable
+  17.406 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS every cave depth rejects scripted rocket silo placement with one refund
+  18.705 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS underground silo ghosts are rejected without a refund or robot rebuild loop
+  19.246 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS robot refund keeps native item quality and returns only the consumed item
+  19.747 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS a full robot cargo spills exactly one quality silo
+  21.367 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS clone and raised ghost revival cannot bypass underground placement
+  21.836 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS other underground machines still build normally
+  37.212 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS native rocket crafting finishes after the tenth or fifth part
+  37.212 Script @__deep-caves__/tests/engine_difficulty.lua:208: DC_ENGINE RESULT 12 passed, 0 failed
+
+cost-minimum
+   0.672 Script @__deep-caves__/tests/engine_difficulty.lua:83: DC_ENGINE SAMPLE compared 0 saved technologies
+   0.672 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS science costs follow the multiplier with a minimum of one and unchanged ingredients and times
+   0.672 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS infinite research scales by level and small formulas never become free
+   0.672 Script @__deep-caves__/tests/engine_difficulty.lua:100: DC_ENGINE SAMPLE research progress 0.4 after ordinary reload
+   0.672 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS save upgrades retain completed research and current selection with native cost recalculation
+   0.672 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS saved rocket silo retains its parts while launch cost becomes ten or five
+   0.707 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS outdoor rocket silos and ghosts remain buildable
+   3.401 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS every cave depth rejects scripted rocket silo placement with one refund
+   3.617 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS underground silo ghosts are rejected without a refund or robot rebuild loop
+   3.760 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS robot refund keeps native item quality and returns only the consumed item
+   3.889 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS a full robot cargo spills exactly one quality silo
+   4.444 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS clone and raised ghost revival cannot bypass underground placement
+   4.740 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS other underground machines still build normally
+  11.817 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS native rocket crafting finishes after the tenth or fifth part
+  11.817 Script @__deep-caves__/tests/engine_difficulty.lua:208: DC_ENGINE RESULT 12 passed, 0 failed
+
+silos-off-space-age
+   9.363 Script @__deep-caves__/tests/engine_difficulty.lua:83: DC_ENGINE SAMPLE compared 277 saved technologies
+   9.363 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS science costs follow the multiplier with a minimum of one and unchanged ingredients and times
+   9.364 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS infinite research scales by level and small formulas never become free
+   9.364 Script @__deep-caves__/tests/engine_difficulty.lua:100: DC_ENGINE SAMPLE research progress 0.4 after cost upgrade
+   9.364 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS save upgrades retain completed research and current selection with native cost recalculation
+   9.364 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS saved rocket silo retains its parts while launch cost becomes ten or five
+   9.507 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS outdoor rocket silos and ghosts remain buildable
+  12.498 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS disabled restriction permits underground builds, ghosts, clones and revivals
+  14.573 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS other underground machines still build normally
+  21.359 Script @__deep-caves__/tests/engine_difficulty.lua:19: DC_ENGINE PASS native rocket crafting finishes after the tenth or fifth part
+  21.359 Script @__deep-caves__/tests/engine_difficulty.lua:208: DC_ENGINE RESULT 8 passed, 0 failed
+
+Additional native 600-tick run: DC_INSERTER PASS cargo transfer after collision clearance change.

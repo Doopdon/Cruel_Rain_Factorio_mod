@@ -1,0 +1,10 @@
+Original seven regression checks, run against the unmodified supplied 0.2.18 archive.
+
+FAIL a new game creates Cave 1 and four starter deposits before first travel: Cave 1 does not exist at the end of initialization
+FAIL one-tile tunnel chunks offer ramp sites, including far from origin: no ramp site in open chunk 300:-304
+FAIL a winning ore roll searches the entire natural tunnel chunk: winning ore roll missed the only floor tile
+FAIL failed ore creation can be retried: failed placement was marked complete
+FAIL failed nest creation can be retried: failed nest placement was marked complete
+PASS ore and nest generation are idempotent
+FAIL ordinary enemy backfill does not resurrect a cleared nest: backfill resurrected a cleared nest
+RESULT: 1 passed, 6 failed

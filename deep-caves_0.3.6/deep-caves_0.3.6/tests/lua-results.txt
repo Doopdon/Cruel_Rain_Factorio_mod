@@ -1,0 +1,72 @@
+PASS a new game creates Cave 1 and four starter deposits before first travel
+PASS one-tile tunnel chunks offer ramp sites, including far from origin
+PASS a winning ore roll searches the entire natural tunnel chunk
+PASS failed ore creation can be retried
+PASS failed nest creation can be retried
+PASS ore and nest generation are idempotent
+PASS ordinary enemy backfill does not resurrect a cleared nest
+PASS starter ores are present, accessible and safe with sparse settings, seed 0
+PASS starter ores are present, accessible and safe with sparse settings, seed 982451653
+PASS starter ores are present, accessible and safe with sparse settings, seed 4294967000
+PASS starter failure retries only the missing tile and never refills mined patches
+PASS winning ore rolls still place resources on wet-only Level 2
+PASS winning ore rolls still place resources on wet-only Level 5
+PASS oil has a buildable footprint in one-tile Level 3 tunnels
+PASS partial two-deposit failure retries without duplicating the completed deposit
+  SAMPLE minimum mesh L1: 20 ramps, 20 nests, 313 resource entities
+PASS minimum mesh: distant ramps, nests and resource types on Level 1
+  SAMPLE minimum mesh L2: 30 ramps, 33 nests, 509 resource entities
+PASS minimum mesh: distant ramps, nests and resource types on Level 2
+  SAMPLE minimum mesh L3: 18 ramps, 52 nests, 345 resource entities
+PASS minimum mesh: distant ramps, nests and resource types on Level 3
+  SAMPLE minimum mesh L4: 18 ramps, 64 nests, 462 resource entities
+PASS minimum mesh: distant ramps, nests and resource types on Level 4
+  SAMPLE minimum mesh L5: 0 ramps, 64 nests, 496 resource entities
+PASS minimum mesh: distant ramps, nests and resource types on Level 5
+  SAMPLE default mesh L1: 26 ramps, 20 nests, 837 resource entities
+PASS default mesh: distant ramps, nests and resource types on Level 1
+  SAMPLE default mesh L2: 35 ramps, 33 nests, 677 resource entities
+PASS default mesh: distant ramps, nests and resource types on Level 2
+  SAMPLE default mesh L3: 26 ramps, 52 nests, 879 resource entities
+PASS default mesh: distant ramps, nests and resource types on Level 3
+  SAMPLE default mesh L4: 31 ramps, 64 nests, 834 resource entities
+PASS default mesh: distant ramps, nests and resource types on Level 4
+  SAMPLE default mesh L5: 0 ramps, 64 nests, 658 resource entities
+PASS default mesh: distant ramps, nests and resource types on Level 5
+  DENSITY 0: 0 / 256 chunks
+PASS enemy overlay honors density 0 in distant chunks
+  DENSITY 0.001: 0 / 256 chunks
+PASS enemy overlay honors density 0.001 in distant chunks
+  DENSITY 0.01: 19 / 256 chunks
+PASS enemy overlay honors density 0.01 in distant chunks
+  DENSITY 0.1: 256 / 256 chunks
+PASS enemy overlay honors density 0.1 in distant chunks
+  DENSITY 0.5: 256 / 256 chunks
+PASS enemy overlay honors density 0.5 in distant chunks
+  DENSITY 1: 256 / 256 chunks
+PASS enemy overlay honors density 1 in distant chunks
+  DENSITY 10: 256 / 256 chunks
+PASS enemy overlay honors density 10 in distant chunks
+PASS safe zone exists before the first up-ramp and does not move with new exits
+PASS winning independent nest overlays connect to the mesh without generating unseen chunks
+PASS nest overlay preserves existing ores and machines
+PASS ramp entity creation failure is retryable and successful placement is unique
+PASS distant Level 1 exploration produces paired surface-return ramps
+PASS pair generation still populates ramps in freshly generated distant cave chunks
+PASS all basic ores, oil and uranium occur in their allowed levels
+PASS bottom level cannot create a downward endpoint
+PASS fixed starter deposits stay clear of ramps across 24 world seeds
+  LOW DENSITY 0.001: 139 / 16384 chunks
+PASS very low positive enemy density still produces nests across a larger region: 0.001
+  LOW DENSITY 0.01: 1292 / 16384 chunks
+PASS very low positive enemy density still produces nests across a larger region: 0.01
+PASS nest probability grows radially and with depth while respecting zero and caps
+PASS near and distant terrain is independent of chunk generation order
+PASS read-only spawn inspection leaves terrain and entities unchanged
+PASS oil survives a narrow tunnel at a chunk corner beside a ramp
+PASS only Cave 1 openings to Nauvis become vents
+PASS vent registry recovery and spawn inspection recognize the new prototype
+PASS surface vent migration preserves helpers, pairs and saved wires
+PASS failed vent migration leaves the old opening and registry intact
+PASS vent inventory clicks and walking travel use the original pairing code
+RESULT: 52 passed, 0 failed

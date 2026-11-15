@@ -1,0 +1,8 @@
+PASS above-ground silos and unrelated underground entities remain placeable
+PASS all five cave levels reject silos and return their consumed quality items
+PASS full player inventory spills exactly the remaining refund
+PASS robots refund only one consumed silo even when their source stack contains more
+PASS underground silo ghosts are removed without creating free refund items
+PASS script builds, revived ghosts and clones spill one quality silo
+PASS disabling the surface-only setting permits underground silos and ghosts
+RESULT: 7 passed, 0 failed

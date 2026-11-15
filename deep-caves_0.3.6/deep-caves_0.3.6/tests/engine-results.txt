@@ -1,0 +1,84 @@
+Minimum mesh, seed 0
+Factorio 2.0.76 + Cave Walls 0.1.13
+PREPARED L1
+PREPARED L2
+PREPARED L3
+PREPARED L4
+PREPARED L5
+PASS initial Cave 1, four complete starter deposits and paired primary ramp
+PASS Level 1 starter nest exclusion applies during initial generation
+SAMPLE L1 ramps=33 nests=5 resources=466
+PASS distant live generation, ramps, nests and ores on Level 1
+SAMPLE L2 ramps=23 nests=10 resources=361
+PASS distant live generation, ramps, nests and ores on Level 2
+SAMPLE L3 ramps=32 nests=11 resources=393
+PASS distant live generation, ramps, nests and ores on Level 3
+SAMPLE L4 ramps=27 nests=8 resources=447
+PASS distant live generation, ramps, nests and ores on Level 4
+SAMPLE L5 ramps=0 nests=8 resources=422
+PASS distant live generation, ramps, nests and ores on Level 5
+PASS four basic ores, oil and uranium are present on their allowed levels
+PASS native biters can spawn beside nests on every level
+PASS spawn inspection reports valid links without generating terrain
+PASS fresh distant pairing generates a valid up-ramp and linked cargo
+PASS exploring a distant Level 1 column creates a paired Nauvis return
+PASS completed generation passes are idempotent and do not resurrect cleared nests
+RESULT 13 passed, 0 failed
+PASS save/reload and 600 simulation ticks
+
+Default mesh, seed 0
+Factorio 2.0.76 + Cave Walls 0.1.13
+PREPARED L1
+PREPARED L2
+PREPARED L3
+PREPARED L4
+PREPARED L5
+PASS initial Cave 1, four complete starter deposits and paired primary ramp
+PASS Level 1 starter nest exclusion applies during initial generation
+SAMPLE L1 ramps=49 nests=5 resources=1255
+PASS distant live generation, ramps, nests and ores on Level 1
+SAMPLE L2 ramps=52 nests=10 resources=900
+PASS distant live generation, ramps, nests and ores on Level 2
+SAMPLE L3 ramps=49 nests=11 resources=1098
+PASS distant live generation, ramps, nests and ores on Level 3
+SAMPLE L4 ramps=40 nests=8 resources=1386
+PASS distant live generation, ramps, nests and ores on Level 4
+SAMPLE L5 ramps=0 nests=8 resources=739
+PASS distant live generation, ramps, nests and ores on Level 5
+PASS four basic ores, oil and uranium are present on their allowed levels
+PASS native biters can spawn beside nests on every level
+PASS spawn inspection reports valid links without generating terrain
+PASS fresh distant pairing generates a valid up-ramp and linked cargo
+PASS exploring a distant Level 1 column creates a paired Nauvis return
+PASS completed generation passes are idempotent and do not resurrect cleared nests
+RESULT 13 passed, 0 failed
+PASS save/reload and 600 simulation ticks
+
+Maximum mesh, seed 17
+Factorio 2.0.76 + Cave Walls 0.1.13
+PREPARED L1
+PREPARED L2
+PREPARED L3
+PREPARED L4
+PREPARED L5
+PASS initial Cave 1, four complete starter deposits and paired primary ramp
+PASS Level 1 starter nest exclusion applies during initial generation
+SAMPLE L1 ramps=43 nests=14 resources=2276
+PASS distant live generation, ramps, nests and ores on Level 1
+SAMPLE L2 ramps=53 nests=12 resources=1651
+PASS distant live generation, ramps, nests and ores on Level 2
+SAMPLE L3 ramps=48 nests=11 resources=2444
+PASS distant live generation, ramps, nests and ores on Level 3
+SAMPLE L4 ramps=51 nests=12 resources=2824
+PASS distant live generation, ramps, nests and ores on Level 4
+SAMPLE L5 ramps=0 nests=7 resources=1414
+PASS distant live generation, ramps, nests and ores on Level 5
+PASS four basic ores, oil and uranium are present on their allowed levels
+PASS native biters can spawn beside nests on every level
+PASS spawn inspection reports valid links without generating terrain
+PASS fresh distant pairing generates a valid up-ramp and linked cargo
+PASS exploring a distant Level 1 column creates a paired Nauvis return
+PASS completed generation passes are idempotent and do not resurrect cleared nests
+RESULT 13 passed, 0 failed
+PASS save/reload and 600 simulation ticks
+

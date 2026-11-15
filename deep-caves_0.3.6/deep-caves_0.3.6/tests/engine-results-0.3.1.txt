@@ -1,0 +1,127 @@
+Cruel Rain 0.3.1 validation; Factorio 2.0.76; saved/reloaded worlds; 600 simulation ticks per run.
+
+Spawning, minimum mesh, seed 0
+   6.286 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L1
+  12.864 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L2
+  21.121 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L3
+  28.315 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L4
+  37.943 Script @__deep-caves__/tests/engine.lua:50: DC_ENGINE PREPARED L5
+  95.435 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS initial Cave 1, four complete starter deposits and paired primary ramp
+  95.436 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS Level 1 starter nest exclusion applies during initial generation
+  95.461 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L1 ramps=33 nests=5 resources=466
+  95.461 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 1
+  95.489 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L2 ramps=23 nests=10 resources=361
+  95.489 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 2
+  95.588 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L3 ramps=32 nests=11 resources=393
+  95.588 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 3
+  95.603 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L4 ramps=27 nests=8 resources=447
+  95.603 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 4
+  95.618 Script @__deep-caves__/tests/engine.lua:108: DC_ENGINE SAMPLE L5 ramps=0 nests=8 resources=422
+  95.618 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS distant live generation, ramps, nests and ores on Level 5
+  95.682 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS four basic ores, oil and uranium are present on their allowed levels
+  95.683 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS native biters can spawn beside nests on every level
+  95.688 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS spawn inspection reports valid links without generating terrain
+  95.939 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS fresh distant pairing generates a valid up-ramp and linked cargo
+  99.838 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS exploring a distant Level 1 column creates a paired Nauvis return
+  99.850 Script @__deep-caves__/tests/engine.lua:13: DC_ENGINE PASS completed generation passes are idempotent and do not resurrect cleared nests
+  99.850 Script @__deep-caves__/tests/engine.lua:201: DC_ENGINE RESULT 13 passed, 0 failed
+
+Vents, default 7.5/min
+   0.626 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS new and upgraded surface openings are registered native vents
+   1.479 Script @__deep-caves__/tests/engine_vents.lua:95: DC_ENGINE PREPARED native vent absorption
+   5.868 Script @__deep-caves__/tests/engine_vents.lua:103: DC_ENGINE SAMPLE 0.375000 pollution removed by one vent; 0.750000 by two over 137 ticks
+   5.868 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS unpowered vents absorb cave pollution through native negative emissions
+   5.868 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS multiple vents in one chunk add their absorption
+   5.868 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS vents stop at zero pollution without producing negative pollution
+   5.868 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS ordinary ascents and descents do not acquire surface ventilation
+   5.868 Script @__deep-caves__/tests/engine_vents.lua:121: DC_ENGINE RESULT 5 passed, 0 failed
+
+Vents, disabled (0/min)
+   0.765 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS new and upgraded surface openings are registered native vents
+   1.656 Script @__deep-caves__/tests/engine_vents.lua:95: DC_ENGINE PREPARED native vent absorption
+   5.976 Script @__deep-caves__/tests/engine_vents.lua:103: DC_ENGINE SAMPLE 0.000000 pollution removed by one vent; 0.000000 by two over 137 ticks
+   5.976 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS unpowered vents absorb cave pollution through native negative emissions
+   5.976 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS multiple vents in one chunk add their absorption
+   5.976 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS vents stop at zero pollution without producing negative pollution
+   5.976 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS ordinary ascents and descents do not acquire surface ventilation
+   5.976 Script @__deep-caves__/tests/engine_vents.lua:121: DC_ENGINE RESULT 5 passed, 0 failed
+
+Vents, custom 25/min
+   0.601 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS new and upgraded surface openings are registered native vents
+   1.233 Script @__deep-caves__/tests/engine_vents.lua:95: DC_ENGINE PREPARED native vent absorption
+   4.041 Script @__deep-caves__/tests/engine_vents.lua:103: DC_ENGINE SAMPLE 1.250000 pollution removed by one vent; 2.500000 by two over 137 ticks
+   4.041 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS unpowered vents absorb cave pollution through native negative emissions
+   4.041 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS multiple vents in one chunk add their absorption
+   4.041 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS vents stop at zero pollution without producing negative pollution
+   4.041 Script @__deep-caves__/tests/engine_vents.lua:8: DC_ENGINE PASS ordinary ascents and descents do not acquire surface ventilation
+   4.041 Script @__deep-caves__/tests/engine_vents.lua:121: DC_ENGINE RESULT 5 passed, 0 failed
+
+Fluids, filled-save reload
+   4.304 Script @__deep-caves__/tests/engine_fluids.lua:54: DC_ENGINE SAVED native linked fluid buffers, 115 water, 37 coal, filter, 8 MJ and wires
+   0.570 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS filled save reload or 0.3.0 upgrade preserves ramp identities, cargo, power and wires
+   0.570 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid survives filled-save reload and existing pipes connect on upgrade
+   0.571 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid upgrade is idempotent and recovers existing native buffer references
+   0.962 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS all four pipe ports work beside older off-grid ramps
+   0.967 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS different fluids block linking without deleting or converting either network
+   1.589 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS building a pipe activates an unused ramp's destination
+   1.589 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid inventory uses native tank storage alongside the existing cargo inventory
+   1.589 Script @__deep-caves__/tests/engine_fluids.lua:159: DC_ENGINE PREPARED native water, oil, steam, fluid conflict and four-side ports
+   4.814 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS native pipe flow crosses cave layers and conserves fluid
+   4.814 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid transfer works in both directions and preserves temperature
+   4.814 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS separate ramp pairs retain separate fluids
+   4.814 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS native buffers enforce capacity and mix steam heat by amount
+   4.814 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS a conflicting pair reconnects after its other fluid is flushed
+   4.815 Script @__deep-caves__/tests/engine_fluids.lua:191: DC_ENGINE RESULT 12 passed, 0 failed
+
+Fluids, 0.3.0 save upgrade
+   4.984 Script @__deep-caves__/tests/engine_fluids.lua:54: DC_ENGINE SAVED legacy pipes, 115 water, 37 coal, filter, 8 MJ and wires
+   1.776 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS filled save reload or 0.3.0 upgrade preserves ramp identities, cargo, power and wires
+   1.776 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid survives filled-save reload and existing pipes connect on upgrade
+   1.778 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid upgrade is idempotent and recovers existing native buffer references
+   2.297 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS all four pipe ports work beside older off-grid ramps
+   2.306 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS different fluids block linking without deleting or converting either network
+   3.158 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS building a pipe activates an unused ramp's destination
+   3.159 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid inventory uses native tank storage alongside the existing cargo inventory
+   3.159 Script @__deep-caves__/tests/engine_fluids.lua:159: DC_ENGINE PREPARED native water, oil, steam, fluid conflict and four-side ports
+   7.759 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS native pipe flow crosses cave layers and conserves fluid
+   7.759 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid transfer works in both directions and preserves temperature
+   7.759 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS separate ramp pairs retain separate fluids
+   7.759 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS native buffers enforce capacity and mix steam heat by amount
+   7.759 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS a conflicting pair reconnects after its other fluid is flushed
+   7.759 Script @__deep-caves__/tests/engine_fluids.lua:191: DC_ENGINE RESULT 12 passed, 0 failed
+
+Fluids with Space Age
+   5.701 Script @__deep-caves__/tests/engine_fluids.lua:54: DC_ENGINE SAVED native linked fluid buffers, 115 water, 37 coal, filter, 8 MJ and wires
+   1.638 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS filled save reload or 0.3.0 upgrade preserves ramp identities, cargo, power and wires
+   1.638 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid survives filled-save reload and existing pipes connect on upgrade
+   1.639 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid upgrade is idempotent and recovers existing native buffer references
+   2.200 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS all four pipe ports work beside older off-grid ramps
+   2.209 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS different fluids block linking without deleting or converting either network
+   3.193 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS building a pipe activates an unused ramp's destination
+   3.193 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid inventory uses native tank storage alongside the existing cargo inventory
+   3.193 Script @__deep-caves__/tests/engine_fluids.lua:159: DC_ENGINE PREPARED native water, oil, steam, fluid conflict and four-side ports
+   7.874 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS native pipe flow crosses cave layers and conserves fluid
+   7.874 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS fluid transfer works in both directions and preserves temperature
+   7.874 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS separate ramp pairs retain separate fluids
+   7.874 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS native buffers enforce capacity and mix steam heat by amount
+   7.874 Script @__deep-caves__/tests/engine_fluids.lua:13: DC_ENGINE PASS a conflicting pair reconnects after its other fluid is flushed
+   7.874 Script @__deep-caves__/tests/engine_fluids.lua:191: DC_ENGINE RESULT 12 passed, 0 failed
+
+Wall/weather/combat regression
+   0.585 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS only the combined Deep Caves mod supplies both compatibility interfaces
+   0.585 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS cave creation, native vents and shared cargo survive combined initialization
+   0.585 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS renamed native vents transmit weather on Cave 1 and respect remote view
+   0.586 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS native weather cleanup preserves cave skylights and puddles
+   1.011 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS native flying creation effects reach the shared script-trigger handler
+   1.011 Script @__deep-caves__/tests/engine_integration.lua:158: DC_ENGINE PREPARED combined wall, weather and combat integration
+   3.855 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS gun-turret holds fire against a target behind native cave walls
+   3.855 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS laser-turret holds fire against a target behind native cave walls
+   3.855 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS flamethrower-turret holds fire against a target behind native cave walls
+   3.855 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS shared tick processing intercepts fast robot crossings and moving bullets
+   3.855 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS surface exposure runs alongside cave population while caves remain sheltered
+   4.005 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS gun-turret resumes normal damage after its wall is erased
+   4.005 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS laser-turret resumes normal damage after its wall is erased
+   4.005 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS flamethrower-turret resumes normal damage after its wall is erased
+   4.005 Script @__deep-caves__/tests/engine_integration.lua:14: DC_ENGINE PASS turning weather off stops surface damage without affecting wall processing
+   4.005 Script @__deep-caves__/tests/engine_integration.lua:161: DC_ENGINE RESULT 14 passed, 0 failed
+

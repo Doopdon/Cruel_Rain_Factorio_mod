@@ -1,0 +1,6 @@
+PASS cargo and fluid buttons preserve the original cargo entity and select the correct window
+PASS a delayed close event from the prior window preserves the newly opened tab
+PASS closing or opening another entity clears the ramp controls
+PASS stale controls cannot open a removed ramp or replace another entity window
+PASS configuration cleanup removes only this mod's ramp panel
+RESULT: 5 passed, 0 failed

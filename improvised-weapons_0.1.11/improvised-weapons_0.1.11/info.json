@@ -1,0 +1,11 @@
+{
+  "name": "improvised-weapons",
+  "version": "0.1.12",
+  "title": "Improvised Weapons",
+  "author": "Improvised Weapons contributors",
+  "factorio_version": "2.1",
+  "dependencies": [
+    "base >= 2.0.0"
+  ],
+  "description": "Early improvised defenses, dangerous spinners, barbed wire, electric fences, unreliable traps, and powered conventional turrets."
+}
